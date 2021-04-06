@@ -113,7 +113,7 @@ aside  {
 .form-new-project {
   margin-top: 6rem;
 }
-.fform-new-project .input-text {
+.form-new-project .input-text {
   border-bottom: 1px solid var(--gris2);
   border-radius: 0;
   background-color: var(--gris1);

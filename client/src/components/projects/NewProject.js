@@ -1,6 +1,27 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, useState} from 'react';
 
 const NewProject = () => {
+
+    //Project state
+    const [project, saveProject] = useState({
+        nombre: ''
+    });
+
+    const {name} = project;
+
+    //Get input content
+    const onChangeProject = e => {
+        saveProject({
+            ...project,
+            [e.target.name] : e.target.value
+        })
+    }
+
+    //User submitting a project
+    const onSubmitProject = e => {
+        e.prevent.Default();
+    }
+
     return(
         <Fragment>
             <button
@@ -9,12 +30,15 @@ const NewProject = () => {
         >New Proyect</button>
         <form
             className="form-new-project"
+            onSubmit={onSubmitProject}
         >
             <input
                 type="text"
                 className="input-text"
                 placeholder="Project name"
                 name="name"
+                value={name}
+                onChange={onChangeProject}
             />
 
             <input
