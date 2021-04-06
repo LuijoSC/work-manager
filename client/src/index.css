@@ -89,7 +89,7 @@ a {
 }
 
 @media (min-width: 768px) {
-  .contenedor-app {
+  .container-app {
       display: flex;
       min-height: 100vh;
   }
@@ -98,7 +98,7 @@ a {
       background-color: var(--blanco);
       flex: 0 0 300px;
   }
-  .seccion-principal {
+  .main-section {
       flex: 1;
   }
 
@@ -180,7 +180,7 @@ aside  {
 }
 
 /** TAREAS LISTADO **/
-.contenedor-tareas {
+.task-container {
   padding: 4rem;
 }
 
