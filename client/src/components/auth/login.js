@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {Link} from 'react-router-dom';
 
 const Login = () => {
     //Login state
@@ -58,6 +59,9 @@ const Login = () => {
                         value="Login" />
                     </div>
                 </form>
+                <Link to ={'/new-account'} className="link-account">
+                    Get an account
+                </Link>
             </div>
         </div>
     );
