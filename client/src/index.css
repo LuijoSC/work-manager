@@ -121,13 +121,13 @@ aside  {
 .formulario-nuevo-proyecto .input-text::placeholder{
   color: var(--gris2);
 }
-.proyectos {
+.projects {
   margin-top: 10rem;
 }
-.listado-proyectos li {
+.projects-list li {
   margin-bottom: 2rem;
 }
-.listado-proyectos li a {
+.projects-list li a {
   font-size: 1.4rem;
   color: var(--gris2);
   line-height: 1.5;

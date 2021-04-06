@@ -1,8 +1,18 @@
 import React from 'react';
+import Sidebar from '../layout/Sidebar';
 
 const Projects = () => {
     return(
-        <h1>Projects component is properly routed</h1>
+        <div className="container-app">
+            <Sidebar/>
+            <div className="main-section">
+                <main>
+                    <div className="tasks-container">
+
+                    </div>
+                </main>
+            </div>
+        </div>
     );
 }
 
