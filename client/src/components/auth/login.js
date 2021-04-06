@@ -1,34 +1,54 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 const Login = () => {
+    //Login state
+    const [user, saveUser] = useState({
+        email: '',
+        password: ''
+    });
 
-    const onChange = () => {
+    //Get from user
+    const{email, password} = user;
 
+    const onChange = e => {
+        saveUser({
+            ...user,
+            [e.target.name] : e.target.value
+        })
+    }
+
+    //To let the user login
+    const onSubmit = e => {
+        e.preventDefault();
     }
 
     return(
         <div className="form-user">
             <div className="container-form shade-dark">
                 <h1>Login</h1>
-                <form>
+                <form
+                    onSubmit={onSubmit}
+                >
                     <div className="field-form">
-                        <label htmlfor="email">Email</label>
+                        <label htmlFor="email">Email</label>
                         <input
                             type="email"
                             id="email"
                             name="email"
                             placeholder="Email"
+                            value={email}
                             onChange={onChange}
                         />
                     </div>
 
                     <div className="field-form">
-                    <label htmlfor="password">Password</label>
+                    <label htmlFor="password">Password</label>
                         <input
                             type="password"
                             id="password"
                             name="password"
                             placeholder="Password"
+                            value={password}
                             onChange={onChange}
                         />
                     </div>
